@@ -1,6 +1,5 @@
 Classroom Info
-    <%= render 'classroom', locals: {classroom: @classroom} %>
-
+<%= render 'classroom', locals: {classroom: @classroom} %>
 
 <% @classroom.students.each do |student| %>
     <%= render 'students/student', locals: {student: student} %>

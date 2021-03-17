@@ -23,7 +23,12 @@ class StudentsController < ApplicationController
   end
 
   def index
-    binding.pry
+    list = Student.search(params[:query])
+    if list.empty?
+      @list = Student.all
+    else
+      @list = list
+    end
     @students = Student.all
   end
 
