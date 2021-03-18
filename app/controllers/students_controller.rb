@@ -25,9 +25,9 @@ class StudentsController < ApplicationController
   def index
     list = Student.search(params[:query])
     if list.empty?
-      @list = Student.all
+      @students = Student.all
     else
-      @list = list
+      @students = list
     end
     # @students = Student.all
   end
