@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
     else
       @list = list
     end
-    @students = Student.all
+    # @students = Student.all
   end
 
   def student_params
